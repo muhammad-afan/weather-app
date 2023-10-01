@@ -44,7 +44,8 @@ function Weather({ image, city }) {
                         <img src={data.current?.condition.icon ? data.current?.condition.icon : ''} alt="" width={120} />
                     </CardMedia>
                     <CardContent>
-                        <Typography variant='h4'>{data.current?.temp_c ? data.current?.temp_c : ''}&deg;C</Typography>
+                        {/* <Typography variant='h4'>{data.current?.temp_c ? data.current?.temp_c : ''}&deg;C</Typography> */}
+                        <Typography variant='h4'>{data.current?.temp_c ? `${data.current.temp_c}°C` : ''}</Typography>
                     </CardContent>
                 </Card>
             </Paper>
